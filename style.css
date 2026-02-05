@@ -1,0 +1,307 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #f7f9fc;
+  color: #333;
+}
+
+/* NAVBAR */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: white;
+  padding: 16px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+nav h1 {
+  color: #2f80ed;
+}
+
+nav a {
+  margin-left: 24px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+/* MAIN HERO (NO IMAGE) */
+.hero {
+  min-height: 90vh;
+  background: linear-gradient(
+    135deg,
+    #56ccf2,   /* beach blue */
+    #6fcf97,   /* mountain green */
+    #2f80ed    /* city blue */
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.hero-box {
+  background: white;
+  padding: 50px;
+  border-radius: 20px;
+  max-width: 600px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.hero-box h2 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.hero-box p {
+  font-size: 18px;
+  margin-bottom: 25px;
+  color: #555;
+}
+
+.btn {
+  display: inline-block;
+  background: #2f80ed;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* SECTION */
+section {
+  padding: 80px 60px;
+  text-align: center;
+}
+
+section h2 {
+  font-size: 32px;
+  margin-bottom: 50px;
+}
+
+/* CARD GRID */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 35px;
+}
+
+.card {
+  background: linear-gradient(135deg, #ffffff, #f1f4f9);
+  padding: 35px 25px;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.15);
+}
+
+.card h3 {
+  color: #2f80ed;
+  margin-bottom: 12px;
+}
+
+.card p {
+  color: #555;
+}
+
+/* FORMS */
+input, select {
+  width: 300px;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+/* FOOTER */
+footer {
+  background: #1f2933;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  nav {
+    padding: 15px 25px;
+  }
+
+  section {
+    padding: 60px 25px;
+  }
+
+  .hero-box h2 {
+    font-size: 32px;
+  }
+}
+/* IMAGE CARD */
+.card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;      /* prevents stretching */
+  object-position: center;
+  border-radius: 18px 18px 0 0;
+}
+
+/* Clickable cards */
+.card a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+/* PRICE BOX */
+.price-box {
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  color: white;
+  margin-top: 15px;
+}
+
+/* BOOK BUTTON */
+.book-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 30px;
+  border-radius: 30px;
+  background: white;
+  color: #333;
+  font-weight: bold;
+  text-decoration: none;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.book-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* THEME COLORS */
+.beach-theme {
+  background: linear-gradient(135deg, #56ccf2, #2f80ed);
+}
+
+.mountain-theme {
+  background: linear-gradient(135deg, #6fcf97, #27ae60);
+}
+
+.city-theme {
+  background: linear-gradient(135deg, #4b6cb7, #182848);
+}
+/* DESTINATION CARD IMAGE */
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 15px 15px 0 0;
+}
+
+.card h3 {
+  padding: 15px;
+}
+
+/* POPUP MODAL */
+.popup {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 200;
+}
+
+.popup-box {
+  background: white;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.popup-box img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.popup-box .price {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 15px 0;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 22px;
+  cursor: pointer;
+}
+/* COMMON BACKGROUND FOR INDEX + DESTINATIONS */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(
+    120deg,
+    #e3f2fd,   /* city blue */
+    #e8f5e9,   /* mountain green */
+    #e0f7fa    /* beach aqua */
+  );
+  min-height: 100vh;
+}
+/* PACKAGE CARD IMAGE */
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 15px 15px 0 0;
+}
+
+/* PACKAGE CARD TEXT */
+.card h3 {
+  margin-top: 15px;
+}
+
+.card p {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+/* BOOK BUTTON (REUSED) */
+.book-btn {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 10px 25px;
+  border-radius: 25px;
+  background: #2f80ed;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.book-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
