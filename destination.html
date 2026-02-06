@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Destinations</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <h1>TravelGo</h1>
+  <a href="index.html">Home</a>
+</nav>
+
+<section>
+  <h2>Our Destinations</h2>
+
+  <div class="cards">
+
+    <!-- BEACH -->
+    <div class="card" onclick="openPopup('Goa','Baga Beach, Fort Aguada, Dudhsagar Falls','₹7,999','goa.jpg')">
+      <img src="images/goa.jpg">
+      <h3>Goa</h3>
+    </div>
+
+    <div class="card" onclick="openPopup('Andaman','Radhanagar Beach, Neil Island','₹9,999','andaman.jpg')">
+      <img src="images/andaman.jpg">
+      <h3>Andaman</h3>
+    </div>
+
+    <div class="card" onclick="openPopup('Maldives','Water Villas, Coral Reefs','₹24,999','maldives.jpg')">
+      <img src="images/maldives.jpg">
+      <h3>Maldives</h3>
+    </div>
+
+    <!-- MOUNTAIN -->
+    <div class="card" onclick="openPopup('Manali','Solang Valley, Rohtang Pass','₹9,499','manali.jpg')">
+      <img src="images/manali.jpg">
+      <h3>Manali</h3>
+    </div>
+
+    <div class="card" onclick="openPopup('Ooty','Botanical Garden, Ooty Lake','₹8,499','ooty.jpg')">
+      <img src="images/ooty.jpg">
+      <h3>Ooty</h3>
+    </div>
+
+    <div class="card" onclick="openPopup('Munnar','Tea Gardens, Echo Point','₹8,999','munnar.jpg')">
+      <img src="images/munnar.jpg">
+      <h3>Munnar</h3>
+    </div>
+
+    <!-- CITY -->
+    <div class="card" onclick="openPopup('Delhi','Red Fort, India Gate','₹6,999','delhi.jpg')">
+      <img src="images/delhi.jpg">
+      <h3>Delhi</h3>
+    </div>
+
+    <div class="card" onclick="openPopup('Dubai','Burj Khalifa, Desert Safari','₹19,999','dubai.jpg')">
+      <img src="images/dubai.jpg">
+      <h3>Dubai</h3>
+    </div>
+
+    <div class="card" onclick="openPopup('Singapore','Marina Bay, Sentosa','₹18,999','singapore.jpg')">
+      <img src="images/singapore.jpg">
+      <h3>Singapore</h3>
+    </div>
+
+  </div>
+</section>
+
+<!-- POPUP MODAL -->
+<div id="popup" class="popup">
+  <div class="popup-box">
+    <span class="close" onclick="closePopup()">×</span>
+
+    <img id="popup-img">
+    <h2 id="popup-title"></h2>
+    <p><strong>Famous Places:</strong></p>
+    <p id="popup-places"></p>
+    <p class="price" id="popup-price"></p>
+
+    <a href="booking.html" class="book-btn">Book Now</a>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
